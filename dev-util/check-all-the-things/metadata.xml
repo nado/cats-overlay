@@ -43,6 +43,7 @@
 		<flag name='bashate'>Support for dev-util/bashate</flag>
 		<flag name='checkbashisms'>Support for dev-util/checkbashisms</flag>
 		<flag name='shellcheck'>Support for dev-util/shellcheck</flag>
+		<flag name='xmllint'>Support for xmllint from dev-libs/libxml2</flag>
 	</use>
 </pkgmetadata>
 

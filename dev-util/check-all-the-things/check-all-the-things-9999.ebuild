@@ -77,6 +77,7 @@ IUSE="
 	${IUSE_PUPPET_MODULES}
 	${IUSE_PYTHON_MODULES}
 	${IUSE_SH_MODULES}
+	xmllint
 "
 
 RDEPEND="
@@ -113,13 +114,14 @@ RDEPEND="
 	opusinfo? ( media-sound/opus-tools )
 	pngcheck? ( media-gfx/pngcheck )
 	puppet?      ( app-admin/puppet )
-	puppet-lint? ( app-admin/puppet-lint )
+	puppet-lint? ( app-admin/puppet-lint[abi_x86_64=] )
 	pep8?     ( dev-python/pep8 )
 	pyflakes? ( dev-python/pyflakes )
 	pylint?   ( dev-python/pylint )
 	bashate?       ( dev-python/bashate )
 	checkbashisms? ( dev-util/checkbashisms )
 	shellcheck?    ( dev-util/shellcheck )
+	xmllint? ( dev-libs/libxml2 )
 
 "
 DEPEND="${RDEPEND}
