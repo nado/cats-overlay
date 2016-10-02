@@ -34,6 +34,8 @@
 		<flag name='mp3check'>Support for media-sound/mp3check</flag>
 		<flag name='opusinfo'>Support for opusinfo from media-sound/opus-tools</flag>
 		<flag name='pngcheck'>Support for media-gfx/pngcheck</flag>
+		<flag name='puppet'>Support for app-admin/puppet</flag>
+		<flag name='puppet-lint'>Support for app-admin/puppet-lint</flag>
 		<flag name='pep8'>Support for dev-python/pep8</flag>
 		<flag name='pyflakes'>Support for dev-python/pyflakes</flag>
 		<flag name='pylint'>Support for dev-python/pylint</flag>

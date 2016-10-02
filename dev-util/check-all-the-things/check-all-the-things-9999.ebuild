@@ -47,6 +47,10 @@ IUSE_HASKELL_MODULES="
 	ghc-mod
 	hlint
 "
+IUSE_PUPPET_MODULES="
+	puppet
+	puppet-lint
+"
 IUSE_PYTHON_MODULES="
 	pep8
 	pyflakes
@@ -71,6 +75,7 @@ IUSE="
 	mp3check
 	opusinfo
 	pngcheck
+	${IUSE_PUPPET_MODULES}
 	${IUSE_PYTHON_MODULES}
 	${IUSE_SH_MODULES}
 "
@@ -107,6 +112,8 @@ RDEPEND="
 	mp3check? ( media-sound/mp3check )
 	opusinfo? ( media-sound/opus-tools )
 	pngcheck? ( media-gfx/pngcheck )
+	puppet?      ( app-admin/puppet )
+	puppet-lint? ( app-admin/puppet-lint )
 	pep8?     ( dev-python/pep8 )
 	pyflakes? ( dev-python/pyflakes )
 	pylint?   ( dev-python/pylint )
