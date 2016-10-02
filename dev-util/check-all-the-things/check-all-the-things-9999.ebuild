@@ -47,6 +47,11 @@ IUSE_HASKELL_MODULES="
 	ghc-mod
 	hlint
 "
+IUSE_PYTHON_MODULES="
+	pep8
+	pyflakes
+	pylint
+"
 IUSE_SH_MODULES="
 	bashate
 	checkbashisms
@@ -66,6 +71,7 @@ IUSE="
 	mp3check
 	opusinfo
 	pngcheck
+	${IUSE_PYTHON_MODULES}
 	${IUSE_SH_MODULES}
 "
 
@@ -101,6 +107,9 @@ RDEPEND="
 	mp3check? ( media-sound/mp3check )
 	opusinfo? ( media-sound/opus-tools )
 	pngcheck? ( media-gfx/pngcheck )
+	pep8?     ( dev-python/pep8 )
+	pyflakes? ( dev-python/pyflakes )
+	pylint?   ( dev-python/pylint )
 	bashate?       ( dev-python/bashate )
 	checkbashisms? ( dev-util/checkbashisms )
 	shellcheck?    ( dev-util/shellcheck )
