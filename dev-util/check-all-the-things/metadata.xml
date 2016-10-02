@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>nado@troglodyte.be</email>
+		<name>Corentin Pazdera</name>
+	</maintainer>
+	<use>
+		<flag name='clang'>Support for multiple sys-devel/clang tools</flag>
+		<flag name='cppcheck'>Support for dev-util/cppcheck</flag>
+		<flag name='complexity'>Support for dev-util/complexity</flag>
+		<flag name='deheader'>Support for dev-util/deheader</flag>
+		<flag name='flawfinder'>Support for dev-util/flawfinder</flag>
+		<flag name='iwyu'>Support for dev-util/include-what-you-use</flag>
+		<flag name='kwstyle'>Support for dev-util/KWStyle</flag>
+		<flag name='pmccabe'>Support for dev-util/pmccabe</flag>
+		<flag name='7z'>Support for app-arch/p7zip</flag>
+		<flag name='lrzip'>Support for app-arch/lrzip</flag>
+		<flag name='lzip'>Support for app-arch/lzip</flag>
+		<flag name='lzop'>Support for app-arch/lzop</flag>
+		<flag name='rzip'>Support for app-arch/rzip</flag>
+		<flag name='unzip'>Support for app-arch/unzip</flag>
+		<flag name='zstd'>Support for app-arch/zstd</flag>
+		<flag name='csslint'>Checks .css with csslint from dev-libs/libcroco</flag>
+		<flag name='desktop'>Checks .desktop files with dev-util/desktop-file-utils</flag>
+		<flag name='encoding'>Support for uudecode from app-arch/sharutils</flag>
+		<flag name='erlang'>Support for erlang checks</flag>
+		<flag name='gettext'>Support for msgfmt checker from sys-devel/gettext</flag>
+		<flag name='cabal'>Support for dev-haskell/cabal checker</flag>
+		<flag name='ghc-mod'>Support for app-emacs/ghc-mod linter</flag>
+		<flag name='hlint'>Support for dev-haskell/hlint</flag>
+		<flag name='jpeginfo'>Support for jpeg checking with media-gfx/jpeginfo</flag>
+		<flag name='empty'>Support for app-misc/empty</flag>
+		<flag name='mp3check'>Support for media-sound/mp3check</flag>
+		<flag name='opusinfo'>Support for opusinfo from media-sound/opus-tools</flag>
+		<flag name='pngcheck'>Support for media-gfx/pngcheck</flag>
+		<flag name='bashate'>Support for dev-util/bashate</flag>
+		<flag name='checkbashisms'>Support for dev-util/checkbashisms</flag>
+		<flag name='shellcheck'>Support for dev-util/shellcheck</flag>
+	</use>
+</pkgmetadata>
+

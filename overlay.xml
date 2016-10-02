@@ -1,0 +1,13 @@
+<repo quality="experimental" status="unofficial">
+	<name>nadoverlay</name>
+	<description lang="en">Personal overlay centered around check-all-the-things</description>
+	<homepage>https://github.com/nado/nadoverlay</homepage>
+	<owner type="person">
+		<email>nado+gentoo@troglodyte.be</email>
+		<name>Corentin Pazdera</name>
+	</owner>
+	<source type="git">https://github.com/nado/nadoverlay.git</source>
+	<source type="git">git://github.com/nado/nadoverlay.git</source>
+	<source type="git">git@github.com:nado/nadoverlay.git</source>
+	<feed>https://github.com/nado/nadoverlay/commits/master.atom</feed>
+</repo>
