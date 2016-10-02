@@ -18,8 +18,6 @@ LICENSE="Expat"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-# Deps list to check whats still needed
-# https://gist.github.com/nado/2ef0ce4970cfad44d2ebcfcad08f9dc5
 IUSE_C_MODULES="
 	clang
 	complexity
@@ -68,6 +66,7 @@ IUSE="
 	desktop
 	encoding
 	erlang
+	fontlint
 	gettext
 	${IUSE_HASKELL_MODULES}
 	jpeginfo
@@ -103,6 +102,7 @@ RDEPEND="
 	desktop? ( dev-util/desktop-file-utils )
 	encoding? ( app-arch/sharutils )
 	erlang? ( dev-lang/erlang )
+	fontlint? ( media-gfx/fontforge )
 	gettext? ( sys-devel/gettext )
 	cabal?   ( dev-haskell/cabal )
 	ghc-mod? ( app-emacs/ghc-mod )

@@ -26,6 +26,7 @@
 		<flag name='encoding'>Support for uudecode from app-arch/sharutils</flag>
 		<flag name='erlang'>Support for erlang checks</flag>
 		<flag name='gettext'>Support for msgfmt checker from sys-devel/gettext</flag>
+		<flag name='fontlint'>Support for fontlint from media-gfx/fontforge</flag>
 		<flag name='cabal'>Support for dev-haskell/cabal checker</flag>
 		<flag name='ghc-mod'>Support for app-emacs/ghc-mod linter</flag>
 		<flag name='hlint'>Support for dev-haskell/hlint</flag>
