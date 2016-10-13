@@ -13,5 +13,3 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/${PN}"
-
-#TODO: remove the .dsc or use it
