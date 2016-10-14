@@ -127,8 +127,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 "
 
-PATCHES=( "${FILESDIR}"/${PN}-python.patch )
-
 src_install() {
 	dobin check-all-the-things
 	dobin check-font-embedding-restrictions
