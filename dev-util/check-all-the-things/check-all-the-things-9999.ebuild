@@ -79,7 +79,6 @@ IUSE="
 	${IUSE_SH_MODULES}
 	xmllint
 "
-
 RDEPEND="
 	clang?      ( sys-devel/clang )
 	complexity? ( dev-util/complexity )
@@ -98,7 +97,7 @@ RDEPEND="
 	lzop?  ( app-arch/lzop )
 	rzip?  ( app-arch/rzip )
 	unzip? ( app-arch/unzip )
-	zstd?  ( app-arch/zstd[abi_x86_64=] )
+	zstd?  ( app-arch/zstd )
 	csslint? ( dev-libs/libcroco )
 	desktop? ( dev-util/desktop-file-utils )
 	encoding? ( app-arch/sharutils )
@@ -116,13 +115,15 @@ RDEPEND="
 	puppet?      ( app-admin/puppet )
 	puppet-lint? ( app-admin/puppet-lint[abi_x86_64=] )
 	pep8?     ( dev-python/pep8 )
-	pyflakes? ( dev-python/pyflakes )
-	pylint?   ( dev-python/pylint )
+	pyflakes? (
+		>=dev-python/pyflakes-0.7.3
+		<dev-python/pyflakes-1.1.0
+		)
+	pylint?   ( >=dev-python/pylint-1.1.0 )
 	bashate?       ( dev-python/bashate )
 	checkbashisms? ( dev-util/checkbashisms )
 	shellcheck?    ( dev-util/shellcheck )
 	xmllint? ( dev-libs/libxml2 )
-
 "
 DEPEND="${RDEPEND}
 "
