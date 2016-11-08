@@ -113,7 +113,7 @@ RDEPEND="
 	opusinfo? ( media-sound/opus-tools )
 	pngcheck? ( media-gfx/pngcheck )
 	puppet?      ( app-admin/puppet )
-	puppet-lint? ( app-admin/puppet-lint[abi_x86_64=] )
+	puppet-lint? ( app-admin/puppet-lint )
 	pep8?     ( dev-python/pep8 )
 	pyflakes? (
 		>=dev-python/pyflakes-0.7.3
