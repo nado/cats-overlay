@@ -18,7 +18,10 @@ LICENSE="Expat"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-IUSE_C_MODULES="
+# TODO: add apstream in the tree first for appstreamcli
+#IUSE_APPSTREAM="appstream-utils"
+
+IUSE_C="
 	clang
 	complexity
 	cppcheck
@@ -28,7 +31,8 @@ IUSE_C_MODULES="
 	kwstyle
 	pmccabe
 "
-IUSE_COMPRESSION_MODULES="
+IUSE_COLLADA="opencolladavalidator"
+IUSE_COMPRESSION="
 	7z
 	bzip2
 	gzip
@@ -40,45 +44,50 @@ IUSE_COMPRESSION_MODULES="
 	unzip
 	zstd
 "
-IUSE_HASKELL_MODULES="
+IUSE_CSS="csslint"
+IUSE_CYPHER="cypher-lint"
+IUSE_HASKELL="
 	cabal
 	ghc-mod
 	hlint
 "
-IUSE_PUPPET_MODULES="
+IUSE_PUPPET="
 	puppet
 	puppet-lint
 "
-IUSE_PYTHON_MODULES="
+IUSE_PYTHON="
 	pep8
 	pyflakes
 	pylint
 "
-IUSE_SH_MODULES="
+IUSE_SH="
 	bashate
 	checkbashisms
 	shellcheck
 "
 IUSE="
-	${IUSE_C_MODULES}
-	${IUSE_COMPRESSION_MODULES}
-	csslint
+	${IUSE_C}
+	${IUSE_COLLADA}
+	${IUSE_COMPRESSION}
+	${IUSE_CSS}
+	${IUSE_CYPHER}
 	desktop
 	encoding
 	erlang
 	fontlint
 	gettext
-	${IUSE_HASKELL_MODULES}
+	${IUSE_HASKELL}
 	jpeginfo
 	empty
 	mp3check
 	opusinfo
 	pngcheck
-	${IUSE_PUPPET_MODULES}
-	${IUSE_PYTHON_MODULES}
-	${IUSE_SH_MODULES}
+	${IUSE_PUPPET}
+	${IUSE_PYTHON}
+	${IUSE_SH}
 	xmllint
 "
+#for RDEPEND : appstream-utils? ( dev-libs/appstream-glib )
 RDEPEND="
 	clang?      ( sys-devel/clang )
 	complexity? ( dev-util/complexity )
@@ -99,6 +108,7 @@ RDEPEND="
 	unzip? ( app-arch/unzip )
 	zstd?  ( app-arch/zstd )
 	csslint? ( dev-libs/libcroco )
+	cypher-lint? ( dev-libs/libcypher-parser[linter] )
 	desktop? ( dev-util/desktop-file-utils )
 	encoding? ( app-arch/sharutils )
 	erlang? ( dev-lang/erlang )
@@ -110,6 +120,7 @@ RDEPEND="
 	jpeginfo? ( media-gfx/jpeginfo )
 	empty? ( app-misc/empty )
 	mp3check? ( media-sound/mp3check )
+	opencolladavalidator? ( media-libs/opencollada )
 	opusinfo? ( media-sound/opus-tools )
 	pngcheck? ( media-gfx/pngcheck )
 	puppet?      ( app-admin/puppet )
