@@ -6,6 +6,7 @@
 		<name>Corentin Pazdera</name>
 	</maintainer>
 	<use>
+		<flag name='appstream-util-validate'>Support for appstream-util command from <pkg>dev-libs/appstream-glib</pkg></flag>
 		<flag name='clang'>Support for multiple <pkg>sys-devel/clang</pkg> tools</flag>
 		<flag name='cppcheck'>Support for <pkg>dev-util/cppcheck</pkg></flag>
 		<flag name='complexity'>Support for <pkg>dev-util/complexity</pkg></flag>
@@ -24,13 +25,15 @@
 		<flag name='zstd'>Support for <pkg>app-arch/zstd</pkg></flag>
 		<flag name='csslint'>Checks .css with csslint from <pkg>dev-libs/libcroco</pkg></flag>
 		<flag name='cypher-lint'>Support for cypher-lint from <pkg>dev-libs/libcypher-parser</pkg></flag>
-		<flag name='desktop'>Checks .desktop files with <pkg>dev-util/desktop-file-utils</pkg></flag>
-		<flag name='encoding'>Support for uudecode from <pkg>app-arch/sharutils</pkg></flag>
-		<flag name='erlang'>Support for erlang checks</flag>
-		<flag name='gettext'>Support for msgfmt checker from <pkg>sys-devel/gettext</pkg></flag>
+		<flag name='desktop-file-validate'>Checks .desktop files with <pkg>dev-util/desktop-file-utils</pkg></flag>
+		<flag name='uu-test'>Support for uudecode from <pkg>app-arch/sharutils</pkg></flag>
+		<flag name='erl-tidy'>Support for <pkg>dev-lang/erlang</pkg> checks</flag>
+		<flag name='msgfmt-check'>Support for msgfmt checker from <pkg>sys-devel/gettext</pkg></flag>
 		<flag name='fontlint'>Support for fontlint from <pkg>media-gfx/fontforge</pkg></flag>
+		<flag name='ftutils'>Support for utilities from <pkg>media-libs/freetype</pkg></flag>
+		<flag name='t1lint'>Support for t1lint from <pkg>app-text/lcdf-typetools</pkg></flag>
 		<flag name='cabal'>Support for <pkg>dev-haskell/cabal</pkg> checker</flag>
-		<flag name='ghc-mod'>Support for <pkg>app-emacs/ghc-mod</pkg> linter</flag>
+		<flag name='ghc-mod-lint'>Support for <pkg>app-emacs/ghc-mod</pkg> linter</flag>
 		<flag name='hlint'>Support for <pkg>dev-haskell/hlint</pkg></flag>
 		<flag name='jpeginfo'>Support for jpeg checking with <pkg>media-gfx/jpeginfo</pkg></flag>
 		<flag name='empty'>Support for <pkg>app-misc/empty</pkg></flag>

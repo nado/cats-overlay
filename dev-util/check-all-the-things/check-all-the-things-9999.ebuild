@@ -18,9 +18,10 @@ LICENSE="Expat"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-# TODO: add apstream in the tree first for appstreamcli
-#IUSE_APPSTREAM="appstream-utils"
-
+# TODO: add apstream in the tree first for appstreamcli-validate
+IUSE_APPSTREAM="appstream-util-validate"
+#TODO: blhc, bls-standalone
+IUSE_BUILD_LOGS=""
 IUSE_C="
 	clang
 	complexity
@@ -31,6 +32,8 @@ IUSE_C="
 	kwstyle
 	pmccabe
 "
+#TODO: foodcritic (https://github.com/acrmp/foodcritic)
+IUSE_CHEF=""
 IUSE_COLLADA="opencolladavalidator"
 IUSE_COMPRESSION="
 	7z
@@ -46,11 +49,40 @@ IUSE_COMPRESSION="
 "
 IUSE_CSS="csslint"
 IUSE_CYPHER="cypher-lint"
+# Do we need those ?
+IUSE_DEBIAN=""
+IUSE_DESKTOP="desktop-file-validate"
+# Same as IUSE_DEBIAN, mainly debian specific stuff there
+IUSE_ELF=""
+IUSE_ENCODING="uu-test"
+#TODO: codespell
+IUSE_ENGLISH=""
+#TODO: epubcheck, flightcrew
+IUSE_EPUB=""
+IUSE_ERLANG="erl-tidy"
+IUSE_FONTS="
+	fontlint
+	ftutils
+	t1lint
+"
+#TODO: gettext-lint, i18nspector
+IUSE_GETTEXT="
+	msgfmt-check
+"
+#TODO: dev-lang/go for gofmt
+IUSE_GO=""
+#TODO: stylish-haskell (https://github.com/jaspervdj/stylish-haskell)
 IUSE_HASKELL="
 	cabal
-	ghc-mod
+	ghc-mod-lint
 	hlint
 "
+#TODO: httpolice (https://github.com/vfaronov/httpolice)
+IUSE_HTTP=""
+IUSE_JPEG="jpeginfo"
+#TODO: jpylyzer (python)
+IUSE_JPEG2000=""
+IUSE_JSON=""
 IUSE_PUPPET="
 	puppet
 	puppet-lint
@@ -66,18 +98,29 @@ IUSE_SH="
 	shellcheck
 "
 IUSE="
+	${IUSE_APPSTREAM}
+	${IUSE_BUILD_LOGS}
 	${IUSE_C}
+	${IUSE_CHEF}
 	${IUSE_COLLADA}
 	${IUSE_COMPRESSION}
 	${IUSE_CSS}
 	${IUSE_CYPHER}
-	desktop
-	encoding
-	erlang
-	fontlint
-	gettext
+	${IUSE_DEBIAN}
+	${IUSE_DESKTOP}
+	${IUSE_ELF}
+	${IUSE_ENCODING}
+	${IUSE_ENGLISH}
+	${IUSE_EPUB}
+	${IUSE_ERLANG}
+	${IUSE_FONTS}
+	${IUSE_GETTEXT}
+	${IUSE_GO}
 	${IUSE_HASKELL}
-	jpeginfo
+	${IUSE_HTTP}
+	${IUSE_JPEG}
+	${IUSE_JPEG2000}
+	${IUSE_JSON}
 	empty
 	mp3check
 	opusinfo
@@ -87,8 +130,9 @@ IUSE="
 	${IUSE_SH}
 	xmllint
 "
-#for RDEPEND : appstream-utils? ( dev-libs/appstream-glib )
+#jsonlint-py3 ( dev-python/demjson )
 RDEPEND="
+	appstream-util-validate? ( dev-libs/appstream-glib )
 	clang?      ( sys-devel/clang )
 	complexity? ( dev-util/complexity )
 	cppcheck?   ( dev-util/cppcheck )
@@ -109,14 +153,16 @@ RDEPEND="
 	zstd?  ( app-arch/zstd )
 	csslint? ( dev-libs/libcroco )
 	cypher-lint? ( dev-libs/libcypher-parser[linter] )
-	desktop? ( dev-util/desktop-file-utils )
-	encoding? ( app-arch/sharutils )
-	erlang? ( dev-lang/erlang )
+	desktop-file-validate? ( dev-util/desktop-file-utils )
+	uu-test? ( app-arch/sharutils )
+	erl-tidy? ( dev-lang/erlang )
 	fontlint? ( media-gfx/fontforge )
-	gettext? ( sys-devel/gettext )
-	cabal?   ( dev-haskell/cabal )
-	ghc-mod? ( app-emacs/ghc-mod )
-	hlint?   ( dev-haskell/hlint )
+	ftutils?  ( media-libs/freetype[utils] )
+	t1lint?   ( app-text/lcdf-typetools )
+	msgfmt-check? ( sys-devel/gettext )
+	cabal?        ( dev-haskell/cabal )
+	ghc-mod-lint? ( app-emacs/ghc-mod )
+	hlint?        ( dev-haskell/hlint )
 	jpeginfo? ( media-gfx/jpeginfo )
 	empty? ( app-misc/empty )
 	mp3check? ( media-sound/mp3check )
@@ -136,8 +182,9 @@ RDEPEND="
 	shellcheck?    ( dev-util/shellcheck )
 	xmllint? ( dev-libs/libxml2 )
 "
-DEPEND="${RDEPEND}
-"
+DEPEND="${RDEPEND}"
+
+DOCS=( doc/{README,TODO} )
 
 src_install() {
 	dobin check-all-the-things
@@ -145,5 +192,6 @@ src_install() {
 
 	dodir /usr/share/"${PN}"
 	cp -r "${S}"/data "${D}"/usr/share/"${PN}"/
-	dodoc doc/{README,TODO}
+
+	einstalldocs
 }
