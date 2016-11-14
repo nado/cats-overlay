@@ -83,6 +83,26 @@ IUSE_JPEG="jpeginfo"
 #TODO: jpylyzer (python)
 IUSE_JPEG2000=""
 IUSE_JSON=""
+IUSE_MISC="
+	fdupes
+	isutf8
+"
+#TODO: mp3val
+IUSE_MP3="mp3check"
+IUSE_OGG="
+	ogginfo
+	oggz-validate
+"
+#TODO: hokey-lint (hopenpgp-tools)
+IUSE_OPENPGP=""
+IUSE_OPUS="opusinfo"
+IUSE_PCAP="dsniff"
+IUSE_PERL="
+	perlcritic
+	podlint
+"
+IUSE_PHP="php-syntax-check"
+IUSE_PNG="pngcheck"
 IUSE_PUPPET="
 	puppet
 	puppet-lint
@@ -92,11 +112,19 @@ IUSE_PYTHON="
 	pyflakes
 	pylint
 "
+#TODO: rpmlint
+IUSE_RPM=""
 IUSE_SH="
 	bashate
 	checkbashisms
 	shellcheck
 "
+#TODO: lintex
+IUSE_TEX="lacheck"
+IUSE_TEXT="rst-lint"
+IUSE_XML="xmllint"
+#TODO: yamllint
+IUSE_YAML=""
 IUSE="
 	${IUSE_APPSTREAM}
 	${IUSE_BUILD_LOGS}
@@ -121,14 +149,22 @@ IUSE="
 	${IUSE_JPEG}
 	${IUSE_JPEG2000}
 	${IUSE_JSON}
-	empty
-	mp3check
-	opusinfo
-	pngcheck
+	${IUSE_MISC}
+	${IUSE_MP3}
+	${IUSE_OGG}
+	${IUSE_OPENPGP}
+	${IUSE_OPUS}
+	${IUSE_PCAP}
+	${IUSE_PERL}
+	${IUSE_PHP}
+	${IUSE_PNG}
 	${IUSE_PUPPET}
 	${IUSE_PYTHON}
 	${IUSE_SH}
-	xmllint
+	${IUSE_TEX}
+	${IUSE_TEXT}
+	${IUSE_XML}
+	${IUSE_YAML}
 "
 #jsonlint-py3 ( dev-python/demjson )
 RDEPEND="
@@ -164,10 +200,17 @@ RDEPEND="
 	ghc-mod-lint? ( app-emacs/ghc-mod )
 	hlint?        ( dev-haskell/hlint )
 	jpeginfo? ( media-gfx/jpeginfo )
-	empty? ( app-misc/empty )
+	fdupes? ( app-misc/fdupes )
+	isutf8? ( sys-apps/moreutils )
 	mp3check? ( media-sound/mp3check )
+	ogginfo?       ( media-sound/vorbis-tools )
+	oggz-validate? ( media-libs/liboggz )
 	opencolladavalidator? ( media-libs/opencollada )
 	opusinfo? ( media-sound/opus-tools )
+	dsniff? ( net-analyzer/dsniff )
+	perlcritic? ( dev-perl/Perl-Critic )
+	podlint?    ( dev-perl/Pod-POM )
+	php-syntax-check? ( dev-lang/php:*[cli] )
 	pngcheck? ( media-gfx/pngcheck )
 	puppet?      ( app-admin/puppet )
 	puppet-lint? ( app-admin/puppet-lint )
@@ -180,6 +223,8 @@ RDEPEND="
 	bashate?       ( dev-python/bashate )
 	checkbashisms? ( dev-util/checkbashisms )
 	shellcheck?    ( dev-util/shellcheck )
+	lacheck? ( app-text/texlive-core )
+	rst-lint? ( dev-python/restructuredtext-lint )
 	xmllint? ( dev-libs/libxml2 )
 "
 DEPEND="${RDEPEND}"

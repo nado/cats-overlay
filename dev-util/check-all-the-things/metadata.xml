@@ -36,9 +36,16 @@
 		<flag name='ghc-mod-lint'>Support for <pkg>app-emacs/ghc-mod</pkg> linter</flag>
 		<flag name='hlint'>Support for <pkg>dev-haskell/hlint</pkg></flag>
 		<flag name='jpeginfo'>Support for jpeg checking with <pkg>media-gfx/jpeginfo</pkg></flag>
-		<flag name='empty'>Support for <pkg>app-misc/empty</pkg></flag>
+		<flag name='fdupes'>Support for <pkg>app-misc/fdupes</pkg></flag>
+		<flag name='isutf8'>Support for isutf8 from <pkg>sys-apps/moreutils</pkg></flag>
 		<flag name='mp3check'>Support for <pkg>media-sound/mp3check</pkg></flag>
+		<flag name='ogginfo'>Support for ogginfo from <pkg>media-sound/vorbis-tools</pkg></flag>
+		<flag name='oggz-validate'>Support for oggz-validate from <pkg>media-libs/liboggz</pkg></flag>
 		<flag name='opusinfo'>Support for opusinfo from <pkg>media-sound/opus-tools</pkg></flag>
+		<flag name='dsniff'>Support for <pkg>net-analyzer/dsniff</pkg></flag>
+		<flag name='perlcritic'>Support for <pkg>dev-perl/Perl-Critic</pkg></flag>
+		<flag name='podlint'>Support for <pkg>dev-perl/Pod-POM</pkg></flag>
+		<flag name='php-syntax-check'>Support for syntax checking from <pkg>dev-lang/php</pkg></flag>
 		<flag name='pngcheck'>Support for <pkg>media-gfx/pngcheck</pkg></flag>
 		<flag name='puppet'>Support for <pkg>app-admin/puppet</pkg></flag>
 		<flag name='puppet-lint'>Support for <pkg>app-admin/puppet-lint</pkg></flag>
@@ -48,6 +55,8 @@
 		<flag name='bashate'>Support for <pkg>dev-util/bashate</pkg></flag>
 		<flag name='checkbashisms'>Support for <pkg>dev-util/checkbashisms</pkg></flag>
 		<flag name='shellcheck'>Support for <pkg>dev-util/shellcheck</pkg></flag>
+		<flag name='lacheck'>Support for lacheck from <pkg>app-text/texlive-core</pkg></flag>
+		<flag name='rst-lint'>Support for <pkg>dev-python/restructuredtext-lint</pkg></flag>
 		<flag name='xmllint'>Support for xmllint from <pkg>dev-libs/libxml2</pkg></flag>
 	</use>
 </pkgmetadata>
